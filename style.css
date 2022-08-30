@@ -1,10 +1,13 @@
 body{
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 .container{
-    width:1356px;
-    margin: 40px auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 70px 40px 70px;
+    overflow-x: hidden;
 }
 .navbar-container{
     display: flex;
@@ -19,6 +22,9 @@ ul.list{
     justify-content: space-between;
 
 }
+.brand-logo img{
+    width: 120px;
+}
 .grow-list { margin-left: 289px;}
 ul.list li a{
     color: #aba8a8;
@@ -31,11 +37,13 @@ ul.list li a{
    
 }
 
+i{ color: rgb(11, 11, 11); font-size: 52px;}
+
 ul.list li a.active{ color: #1b1b1b;}
 ul.list li a:hover{
     opacity: 0.6;
 }
-.button-group{ margin-left: -154px;}
+
 
 .nav-button{
     padding: 10px 25px;
@@ -47,8 +55,6 @@ ul.list li a:hover{
     border-radius: 10px;
     font-weight: 400;
    
-    margin-right: 50px;
-
 }
 .nav-button:hover{
     opacity: 0.9;
@@ -85,6 +91,14 @@ ul.list li a:hover{
     margin-left: 10px;
     margin-top: 50px;
 }
+.btn-mar{
+    margin: 35px 0px 0px 0px;
+}
+.banner-leftop{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
 
 .heading-text{
     font-size: 60px;
@@ -108,7 +122,7 @@ ul.list li a:hover{
 
 .btn{
     margin-top: 35px;
-    margin-left: 61px;
+   
   }
 .nav-button{
     padding: 15px 35px;
@@ -126,15 +140,23 @@ ul.list li a:hover{
 
 .service-box{
     margin: 0px 61px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
+.box-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .service-box .box{
     width: 100%; 
     margin: 20px 20px 20px 20px;
    
     float: left;
     /* display: block; */
-    width: 365px;
+    width: 349px;
 
 }
 .box img{
@@ -152,6 +174,8 @@ ul.list li a:hover{
     background:linear-gradient(to top, #5292f2, #63cbf9);
      text-align: center;
     padding: 50px 80px;
+    display: flex;
+    flex-direction: column;
 }
 
 .price-center-box{
@@ -249,7 +273,9 @@ ul.listprice li a:hover{
     background: #fff;
     text-align: center;
     padding: 50px 80px;
-    margin-top: 80px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
 }
 .customer-section h1{
     font-family: 'Open Sans';
@@ -259,7 +285,7 @@ ul.listprice li a:hover{
 }
 
 .customer-section p{
-    color: #fff; 
+    color: #c7c6c6; 
     font-family: 'Open Sans';
     font-weight: 400;
    
@@ -379,3 +405,146 @@ ul.footerlist li:hover{
     justify-content: space-around;
 }
 
+
+
+@media only screen and (max-width: 1200px) {
+    
+    .brand-img{height: 50%;}
+
+     nav .nav-items{
+        display: none;
+    }
+    nav .nav-menu-icon{
+        display: block;
+        margin: auto;
+    }
+}
+@media  screen and (min-width: 1240px) {
+
+    nav .nav-menu-icon{
+        display: none;
+       
+    }
+}
+@media  screen and (max-width: 700px) {
+    body {
+   
+      overflow-x: hidden;
+    }
+
+    nav .list{
+        display: none;
+    }
+  .nav-menu-icon{
+        display: block;
+        margin: auto;
+    }
+
+    .container {
+       margin: 40px 4px;
+    }
+    .nav-button {
+        padding: 9px 14px;
+    }
+    .button-group{
+        margin-left: 12px;
+    }
+
+    i {
+        color: rgb(11, 11, 11);
+        font-size: 43px;
+    }
+    .banner-container {
+      
+        margin-left: 10px;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .heading-text {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+.description{
+    text-align: center;
+}
+
+.package-button{
+    margin-right: 0px;
+}
+
+.cloud-img img{
+    height: 283px;
+    margin-top: 20px;
+}
+.banner-leftop {
+   
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-container {
+    padding: 1px 6px;
+    flex-direction: column;
+}
+
+.price-main {
+   flex-direction: column;
+}
+.pricing-container .price-box{
+    width: auto;
+    padding: 18px;
+}
+
+.list-containt {
+    margin: 15px 9px 0px 0px;
+    padding: 0px;
+}
+.price-center-box{
+    width: 84%;
+}
+
+.pricing-container h1 {
+   
+    font-size: 31px;
+}
+.customer-section {
+  
+    padding: 2px 1px;
+    margin-top: 0px;
+   
+}
+
+.customer-section h1 {
+    margin-bottom: 0px;
+    font-size: 31px;
+}
+
+.register-section {
+    margin-top: 0px;
+    
+    align-items: center;
+    padding:11px 18px;
+  
+    flex-direction: column;
+}
+.register-section p{
+    text-align: center;
+}
+.register-section h1 {
+   
+    font-size: 32px;
+}
+
+.footer {
+  
+    margin-top: 32px;
+   
+    flex-wrap: wrap;
+}
+.footer p,.text-center{
+    text-align: center;
+}
+
+}
